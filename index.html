@@ -1,577 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Mohammed Irshad</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Irshad — IT Infrastructure and Systems Administrator in the UAE. Systems, networking, security, backup, virtualization and automation.">
+  <meta property="og:title" content="Irshad | IT Infrastructure & Systems Administration">
+  <meta property="og:description" content="Practical IT infrastructure, systems administration, networking and automation.">
+  <title>Irshad | IT Infrastructure & Systems Administration</title>
+  <style>
+    :root {
+      --bg: #080d19;
+      --panel: rgba(17, 25, 43, .78);
+      --panel-solid: #11192b;
+      --text: #eef3ff;
+      --muted: #a5b1c8;
+      --line: rgba(173, 191, 225, .16);
+      --accent: #7c9cff;
+      --accent-2: #5eead4;
+      --max: 1120px;
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+    body {
+      margin: 0; color: var(--text); background:
+      radial-gradient(ellipse at 75% 0%, rgba(70, 94, 190, .19), transparent 34rem),
+      radial-gradient(ellipse at 0% 32%, rgba(39, 182, 169, .08), transparent 32rem), var(--bg);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.65; -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    .wrap { width: min(var(--max), calc(100% - 40px)); margin-inline: auto; }
+    .nav-shell { position: sticky; top: 0; z-index: 10; background: rgba(8,13,25,.78); backdrop-filter: blur(18px); border-bottom: 1px solid var(--line); }
+    nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font-weight: 800; letter-spacing: -.04em; }
+    .brand-mark { display: grid; place-items: center; width: 37px; height: 37px; border-radius: 12px; color: #07101b; background: linear-gradient(135deg, var(--accent-2), var(--accent)); font-size: .9rem; letter-spacing: -.05em; }
+    .nav-links { display: flex; align-items: center; gap: 26px; color: var(--muted); font-size: .91rem; }
+    .nav-links a:hover, .nav-links a:focus-visible { color: var(--text); }
+    .nav-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 12px; padding: 11px 16px; font-weight: 700; font-size: .92rem; border: 1px solid var(--line); transition: transform .2s, border-color .2s, background .2s; }
+    .button:hover, .nav-cta:hover { transform: translateY(-2px); border-color: rgba(124,156,255,.6); }
+    .button.primary { color: #07101b; background: linear-gradient(120deg, var(--accent-2), #9bb1ff); border-color: transparent; }
+    .button.secondary { background: rgba(255,255,255,.035); }
+    .menu-toggle { display: none; border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 10px; padding: 9px 12px; font-size: 1.1rem; }
+    .hero { padding: 92px 0 78px; display: grid; grid-template-columns: 1.15fr .85fr; align-items: center; gap: 64px; min-height: 610px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #c6d5ff; text-transform: uppercase; letter-spacing: .15em; font-size: .73rem; font-weight: 800; }
+    .eyebrow:before { content: ""; width: 25px; height: 1px; background: var(--accent-2); }
+    h1 { font-size: clamp(2.8rem, 5.7vw, 5.25rem); line-height: 1.02; letter-spacing: -.065em; margin: 22px 0 24px; max-width: 760px; }
+    .gradient-text { background: linear-gradient(110deg, #eff4ff 10%, #9bb1ff 58%, #5eead4); color: transparent; background-clip: text; -webkit-background-clip: text; }
+    .hero-copy { color: var(--muted); font-size: 1.1rem; max-width: 620px; }
+    .hero-copy strong { color: var(--text); font-weight: 650; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .micro-trust { display: flex; flex-wrap: wrap; gap: 18px; margin-top: 29px; color: var(--muted); font-size: .85rem; }
+    .micro-trust span { display: inline-flex; align-items: center; gap: 7px; }
+    .dot { width: 7px; height: 7px; background: var(--accent-2); border-radius: 99px; box-shadow: 0 0 14px rgba(94,234,212,.65); }
+    .terminal-card { position: relative; padding: 22px; border: 1px solid rgba(153,177,255,.22); background: linear-gradient(150deg, rgba(22,32,55,.93), rgba(11,17,31,.93)); border-radius: 25px; box-shadow: 0 30px 90px rgba(0,0,0,.25); transform: rotate(1deg); }
+    .terminal-card:before { content: ""; position: absolute; inset: -1px; z-index: -1; border-radius: inherit; background: linear-gradient(140deg, rgba(94,234,212,.3), transparent 42%, rgba(124,156,255,.22)); filter: blur(18px); opacity: .55; }
+    .terminal-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 17px; border-bottom: 1px solid var(--line); color: var(--muted); font-size: .78rem; }
+    .lights { display: flex; gap: 6px; }
+    .lights i { width: 8px; height: 8px; border-radius: 50%; background: #66738e; }
+    .lights i:first-child { background: #fb7185; } .lights i:nth-child(2) { background: #fbbf24; } .lights i:nth-child(3) { background: #5eead4; }
+    .terminal-body { padding: 18px 0 5px; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88rem; }
+    .terminal-line { display: flex; gap: 10px; margin: 12px 0; color: #c8d5ed; overflow-wrap: anywhere; }
+    .prompt { color: var(--accent-2); }
+    .terminal-comment { color: #7e8ba6; }
+    .status-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 10px; margin-top: 22px; }
+    .status { border: 1px solid var(--line); background: rgba(255,255,255,.025); border-radius: 13px; padding: 12px; }
+    .status small { display: block; color: var(--muted); font-size: .72rem; }
+    .status b { display: block; margin-top: 3px; font-size: .89rem; }
+    section { padding: 76px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 30px; }
+    .kicker { color: var(--accent-2); font-size: .75rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 800; }
+    h2 { font-size: clamp(2rem, 3.7vw, 3.2rem); line-height: 1.1; letter-spacing: -.05em; margin: 9px 0 0; }
+    .section-intro { color: var(--muted); max-width: 480px; margin: 0; }
+    .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 22px; }
+    .panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; }
+    .about-callout { background: linear-gradient(140deg, rgba(124,156,255,.13), rgba(94,234,212,.06)); display: flex; flex-direction: column; justify-content: space-between; min-height: 290px; }
+    .big-quote { font-size: 1.45rem; line-height: 1.4; letter-spacing: -.03em; }
+    .subtle { color: var(--muted); }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .tag { padding: 6px 10px; border-radius: 99px; border: 1px solid var(--line); color: #d1dcf1; font-size: .78rem; background: rgba(255,255,255,.025); }
+    .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 14px; }
+    .skill-card { padding: 22px; border-radius: 18px; background: var(--panel); border: 1px solid var(--line); min-height: 190px; }
+    .skill-icon { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; color: var(--accent-2); background: rgba(94,234,212,.09); font-size: 1.15rem; margin-bottom: 18px; }
+    h3 { margin: 0 0 8px; font-size: 1.08rem; letter-spacing: -.02em; }
+    .skill-card p, .project-card p { color: var(--muted); font-size: .91rem; margin: 0; }
+    .projects-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; }
+    .project-card { position: relative; padding: 25px; border: 1px solid var(--line); border-radius: 20px; background: linear-gradient(145deg, rgba(19,28,47,.88), rgba(11,17,30,.8)); overflow: hidden; }
+    .project-card:after { content: ""; position: absolute; width: 140px; height: 140px; right: -65px; top: -65px; border-radius: 50%; border: 1px solid rgba(124,156,255,.16); box-shadow: 0 0 0 18px rgba(124,156,255,.025), 0 0 0 36px rgba(124,156,255,.02); }
+    .project-number { color: var(--accent-2); font-family: ui-monospace, monospace; font-size: .78rem; margin-bottom: 20px; }
+    .project-card h3 { font-size: 1.18rem; }
+    .project-card .tag-row { margin-top: 17px; }
+    .project-note { font-size: .78rem; color: #8d9bb6; margin-top: 14px; }
+    .timeline { border-left: 1px solid rgba(124,156,255,.35); margin-left: 8px; padding-left: 25px; display: grid; gap: 25px; }
+    .timeline-item { position: relative; }
+    .timeline-item:before { content: ""; position: absolute; left: -31px; top: 8px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent-2); box-shadow: 0 0 0 5px rgba(94,234,212,.09); }
+    .timeline-item p { color: var(--muted); margin: 8px 0 0; }
+    .experience-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: 28px; }
+    .experience-summary { padding: 24px; border: 1px solid var(--line); border-radius: 18px; background: var(--panel); }
+    .contact-box { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 28px; padding: clamp(25px, 5vw, 48px); border: 1px solid rgba(124,156,255,.24); border-radius: 26px; background: linear-gradient(120deg, rgba(124,156,255,.12), rgba(94,234,212,.055)); }
+    .contact-box p { color: var(--muted); max-width: 620px; }
+    footer { border-top: 1px solid var(--line); padding: 25px 0 35px; color: var(--muted); font-size: .82rem; }
+    .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .65s ease, transform .65s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+    :focus-visible { outline: 2px solid var(--accent-2); outline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } .reveal { opacity: 1; transform: none; } }
+    @media (max-width: 850px) {
+      .hero { grid-template-columns: 1fr; gap: 42px; padding-top: 70px; min-height: auto; }
+      .terminal-card { max-width: 560px; transform: none; }
+      .about-grid, .experience-layout { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: repeat(2,1fr); }
+      .section-head { align-items: start; flex-direction: column; }
+      .contact-box { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 650px) {
+      .wrap { width: min(var(--max), calc(100% - 28px)); }
+      nav { min-height: 66px; }
+      .menu-toggle { display: block; }
+      .nav-links { display: none; position: absolute; top: 66px; left: 0; right: 0; padding: 16px 22px 22px; background: rgba(8,13,25,.98); border-bottom: 1px solid var(--line); flex-direction: column; align-items: stretch; gap: 0; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px 0; }
+      .nav-cta { display: none; }
+      .hero { padding: 58px 0 50px; }
+      h1 { font-size: clamp(2.7rem, 14vw, 4rem); }
+      .hero-copy { font-size: 1rem; }
+      section { padding: 55px 0; }
+      .skills-grid, .projects-grid { grid-template-columns: 1fr; }
+      .panel, .project-card { padding: 21px; }
+      .status-grid { gap: 8px; }
+      .terminal-card { padding: 17px; }
+      .footer-inner { flex-direction: column; }
+    }
+  </style>
 </head>
-
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            <!-- <h1 class="m-0 display-5"><span class="text-primary">Free</span>Folio</h1> -->
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#experience" class="nav-item nav-link">Experience</a>
-                <a href="#qualification" class="nav-item nav-link">Qualification</a>
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#service" class="nav-item nav-link">Service</a>
-                <!-- <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                <a href="#testimonial" class="nav-item nav-link">Review</a> -->
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="" class="btn btn-menu d-none d-lg-block" style="background-color:#457efa; color: #ffffff;">Hire Me</a>
-        </div>
+<body>
+  <div class="nav-shell">
+    <nav class="wrap" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Irshad home"><span class="brand-mark">IR</span><span>Irshad<span style="color:var(--accent-2)">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </div>
+      <a class="nav-cta" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
     </nav>
-    <!-- Navbar End -->
+  </div>
 
- 
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-               
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">Hello, my name is</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 4px #ffffff;">Irshad</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">IT Service Engineer, Web Designer, Web Developer, Front End Developer, Mobile Apps Designer, Mobile Apps Developer</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="assets/" download="resume.pdf" class="btn btn-white mr-4">Download CV</a>
-                        
-                        <!-- <a href="" class="btn btn-blue d-none d-sm-block">Play Video</a> -->
-                    </div>
-                </div>
-                <div class="col-lg-6 px-8 pl-lg-0 pb-5 pb-lg-4 about-img">
-                   <!-- <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.png" alt=""> -->
-                </div>
-            </div>
+  <main>
+    <header class="hero wrap" id="home">
+      <div class="reveal">
+        <div class="eyebrow">IT Infrastructure &amp; Systems Administration</div>
+        <h1>Keeping business IT <span class="gradient-text">secure, reliable,</span> and running.</h1>
+        <p class="hero-copy">I'm Irshad, an IT professional in the UAE focused on <strong>systems administration, networking, infrastructure support, backup and recovery, and practical automation.</strong> I help keep the technology people rely on working smoothly.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="button secondary" href="#contact">Contact me <span aria-hidden="true">↗</span></a>
         </div>
-    </div>
-    <!-- Header End -->
-
-
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">IT Service Engineer & Web / Mobile Developer</h3>
-                    <p>I'm an experienced IT Service Engineer, graduated BE CSE from Anna University Chennai. Also a web/mobile app designer and developer tenderfoot, been learning all the tools and codes by myself, Also stepping into network engineering</p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Mohammed Irshad</span></h6></div>
-                        <!--<div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">13 September 1996</span></h6></div>-->
-                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">Bachelor Degree</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">2 Years</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+974 7739 2396</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">idlz717@gmail.com</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">Kerala, India</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
-                    </div>
-                    <a href="" class="btn blue btn-outline-primary mr-4">Hire Me</a>
-                    <a href="" class="btn btn-outline-primary">Learn More</a>
-                </div>
-            </div>
+        <div class="micro-trust"><span><i class="dot"></i> Hands-on IT operations</span><span><i class="dot"></i> Infrastructure &amp; support</span><span><i class="dot"></i> Automation mindset</span></div>
+      </div>
+      <div class="terminal-card reveal" aria-label="Illustrative IT infrastructure terminal panel">
+        <div class="terminal-top"><span class="lights"><i></i><i></i><i></i></span><span>infra-overview.sh</span><span>● operational mindset</span></div>
+        <div class="terminal-body">
+          <div class="terminal-line"><span class="prompt">$</span><span>whoami</span></div>
+          <div class="terminal-line"><span>irshad — systems administrator</span></div>
+          <div class="terminal-line"><span class="prompt">$</span><span>focus --areas</span></div>
+          <div class="terminal-line"><span class="terminal-comment"># systems · network · security · recovery</span></div>
+          <div class="terminal-line"><span class="prompt">$</span><span>automation --enabled</span></div>
+          <div class="terminal-line"><span>PowerShell / scripting / repeatable workflows</span></div>
+          <div class="terminal-line"><span class="prompt">$</span><span>status --goal</span></div>
+          <div class="terminal-line"><span style="color:var(--accent-2)">Build reliable, supportable IT.</span></div>
         </div>
-    </div>
-    <!-- About End -->
-
-
-    
-    <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">HTML</h6>
-                            <h6 class="font-weight-bold">70%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">CSS</h6>
-                            <h6 class="font-weight-bold">65%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Javascript</h6>
-                            <h6 class="font-weight-bold">40%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Java</h6>
-                            <h6 class="font-weight-bold">55%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Flutter</h6>
-                            <h6 class="font-weight-bold">40%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">C / C ++</h6>
-                            <h6 class="font-weight-bold">55%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                </div>
-            </div>
+        <div class="status-grid">
+          <div class="status"><small>CORE</small><b>Systems &amp; servers</b></div>
+          <div class="status"><small>CONNECTIVITY</small><b>Networks &amp; VPN</b></div>
+          <div class="status"><small>RESILIENCE</small><b>Backup &amp; recovery</b></div>
+          <div class="status"><small>EFFICIENCY</small><b>Scripts &amp; automation</b></div>
         </div>
-    </div>
-    <!-- Skill End -->
+      </div>
+    </header>
 
-
-
-
-    <!-- Experience Start -->
-    <div class="container-fluid py-5" id="experience">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Work</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Experiences</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <h3 class="mb-4">My Work Experiences</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px; font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">IT Service Engineer</h5>
-                            <p class="mb-2"><strong>SAMSUNG R&D INSTITUTE INDIA - BANGALORE PRIVATE LTD</strong> | <small>11/2022 - Present</small></p>
-                            <p>&nbsp</p>
-                            <!-- <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p> -->
-                        </div>
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">DELL Field Service Engineer</h5>
-                            <p class="mb-2"><strong>TVS-Electronics BANGALORE</strong> | <small>09/2022 - 11/2022</small></p>
-                            <p>&nbsp</p>
-                            <!-- <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p> -->
-                        </div>
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">System Technician / Asst. Project Manager
-                            </h5>
-                            <p class="mb-2"><strong>Reborn Software Solutions Private Ltd</strong> | <small>12/2021 - 07/2022</small></p>
-                            <p>&nbsp</p>
-                            <!-- <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">A little about me</div><h2>Practical IT, from endpoint to infrastructure.</h2></div><p class="section-intro">A hands-on approach to keeping users productive and business systems dependable.</p></div>
+        <div class="about-grid">
+          <div class="panel about-callout reveal">
+            <div><div class="kicker">My approach</div><p class="big-quote">“Solve the root cause. Document the fix. Make the next incident easier.”</p></div>
+            <div class="tag-row"><span class="tag">Troubleshooting</span><span class="tag">Documentation</span><span class="tag">Continuous improvement</span></div>
+          </div>
+          <div class="panel reveal">
+            <h3>What I bring</h3>
+            <p class="subtle">My experience spans end-user support, Windows and Linux environments, VMware infrastructure, network troubleshooting, server hardware, RAID/storage, firewalls, VPNs, and scripting. I enjoy connecting the day-to-day needs of users with the systems and processes that support the business.</p>
+            <p class="subtle">I value clear documentation, sensible security, reliable backups, and automation that reduces repetitive work. My focus is on building an IT environment that is easier to support, maintain, and recover.</p>
+            <div class="tag-row"><span class="tag">Windows &amp; Linux</span><span class="tag">VMware</span><span class="tag">Networking</span><span class="tag">PowerShell</span><span class="tag">IT operations</span></div>
+          </div>
         </div>
-    </div>
-    <!-- Experience End -->
-    <!-- Qualification Start -->
-    <div class="container-fluid py-5" id="qualification">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Education</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Qualification</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-12">
-                    <h3 class="mb-4">My Education</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px; font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">Bachelor of Engineering in Computer Science</h5>
-                            <p class="mb-2"><strong>Anna University, Chennai</strong> | <small>2015 - 2019</small></p>
-                            <p>&nbsp</p>
-                            <!-- <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p> -->
-                        </div>
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">Higher Secondary School</h5>
-                            <p class="mb-2"><strong>KERALA BOARD OF PUBLIC EXAMINATION</strong> | <small>2013 - 2015</small></p>
-                            <p>&nbsp</p>
-                            <!-- <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p> -->
-                        </div>
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -35px;  font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">High School [ Std X ]</h5>
-                            <p class="mb-2"><strong>KERALA BOARD OF PUBLIC EXAMINATION</strong> | <small>2012 - 2013</small></p>
-                            <p>&nbsp</p>
-                            <!-- <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p> -->
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-lg-6">
-                    <h3 class="mb-4">My Expericence</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small> Excellent</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">Artificial Intelligence</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small> Good</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                        <div class="position-relative ex-me mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px;left: -35px;  font-size: 22px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web Development</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small> Excellent</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                    </div>
-                </div> -->
-            </div>
+      </div>
+    </section>
+
+    <section id="expertise">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">Technical expertise</div><h2>The systems behind the business.</h2></div><p class="section-intro">Core areas of practice. Specific tools and platforms should reflect the work I have personally delivered.</p></div>
+        <div class="skills-grid">
+          <article class="skill-card reveal"><div class="skill-icon">▣</div><h3>Systems Administration</h3><p>Windows Server, Active Directory, Group Policy, DNS, DHCP, user administration and endpoint support.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon">⌘</div><h3>Networking &amp; Security</h3><p>LAN/WAN troubleshooting, firewalls, VPN connectivity, routing, switching and network services.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon">▤</div><h3>Virtualization &amp; Servers</h3><p>VMware ESXi/vSphere, server deployment, hardware diagnostics, operating systems and maintenance.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon">↻</div><h3>Backup &amp; Recovery</h3><p>Backup operations, storage planning, RAID troubleshooting, recovery readiness and data protection.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon">&gt;_</div><h3>Automation &amp; Containers</h3><p>PowerShell scripting, scheduled tasks, repeatable admin workflows and Docker-based services.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon">◎</div><h3>IT Support &amp; Operations</h3><p>Help desk, hardware/software troubleshooting, monitoring, asset administration and documentation.</p></article>
         </div>
-    </div>
-    <!-- Qualification End -->
+      </div>
+    </section>
 
-
-
-    <!-- Services Start -->
-    <div class="container-fluid pt-5" id="service">
-        <div class="container">
-            <div class="service-h4 position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
-            </div>
-            <div class="row pb-3">
-                <div class="service-box col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Design</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="service-box col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Development</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="service-box col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Apps Design</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="service-box col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Apps Development</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem Amet lorem lorem</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="service-box col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-wrench service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Part Service</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem  </p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="service-box col-lg-4  col-md-7 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-user-plus service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">IT Service</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-            </div>
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">Selected work</div><h2>Projects &amp; practical experience.</h2></div><p class="section-intro">A portfolio of technical work, written as case studies rather than a list of tools.</p></div>
+        <div class="projects-grid">
+          <article class="project-card reveal"><div class="project-number">PROJECT / 01</div><h3>IT Documentation Platform</h3><p>Planning and deploying a self-hosted documentation platform to organize infrastructure notes, procedures and troubleshooting knowledge in one place.</p><div class="tag-row"><span class="tag">Docker</span><span class="tag">BookStack</span><span class="tag">Documentation</span></div><div class="project-note">Case-study outline — add verified implementation details and screenshots before publishing.</div></article>
+          <article class="project-card reveal"><div class="project-number">PROJECT / 02</div><h3>IT Asset &amp; Help Desk Tools</h3><p>Working with self-hosted IT service and asset-management tools to make support information, assets and operational tasks easier to track.</p><div class="tag-row"><span class="tag">GLPI</span><span class="tag">Snipe-IT</span><span class="tag">IT operations</span></div><div class="project-note">Case-study outline — document what is live, what is in testing, and the resulting benefits.</div></article>
+          <article class="project-card reveal"><div class="project-number">PROJECT / 03</div><h3>Server &amp; Storage Administration</h3><p>Server hardware diagnostics and maintenance involving HPE infrastructure, storage controllers, drive health, RAID considerations and backup planning.</p><div class="tag-row"><span class="tag">HPE ProLiant</span><span class="tag">RAID</span><span class="tag">Storage</span></div><div class="project-note">Keep company names, internal IPs, serial numbers and sensitive configuration details private.</div></article>
+          <article class="project-card reveal"><div class="project-number">PROJECT / 04</div><h3>PowerShell Administration</h3><p>Using scripts and scheduled workflows to reduce repetitive administration and improve consistency in routine IT tasks.</p><div class="tag-row"><span class="tag">PowerShell</span><span class="tag">Automation</span><span class="tag">Windows</span></div><div class="project-note">Add a sanitized example script, the problem it solves, and measurable results where available.</div></article>
         </div>
-    </div>
-    <!-- Services End -->
+      </div>
+    </section>
 
-
-    <!-- Portfolio Start -->
-    <!-- <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
-            </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Design</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Development</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-4.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-5.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-6.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head reveal"><div><div class="kicker">Experience &amp; working style</div><h2>Reliable operations are a team effort.</h2></div><p class="section-intro">A clear, honest summary of the work areas I support—without inventing titles, dates or performance metrics.</p></div>
+        <div class="experience-layout">
+          <div class="experience-summary reveal"><div class="kicker">Focus</div><h3 style="font-size:1.4rem;margin-top:12px">End-to-end IT support</h3><p class="subtle">From user issues and network connectivity to servers, backups, and operational documentation.</p><div class="tag-row"><span class="tag">Support</span><span class="tag">Administration</span><span class="tag">Troubleshooting</span></div></div>
+          <div class="timeline reveal">
+            <div class="timeline-item"><h3>Systems &amp; Infrastructure</h3><p>Support and administration across Windows/Linux systems, virtualization, server hardware, storage, and core network services.</p></div>
+            <div class="timeline-item"><h3>Network &amp; End-user Support</h3><p>Troubleshooting connectivity, VPNs, firewalls, user devices, printers, and business technology across operational environments.</p></div>
+            <div class="timeline-item"><h3>Documentation &amp; Improvement</h3><p>Creating repeatable procedures, recording fixes, and using scripting to reduce avoidable manual work.</p></div>
+            <p class="project-note">Add your verified employer names, job titles, and employment dates here to align this section with your current CV.</p>
+          </div>
         </div>
-    </div> -->
-    <!-- Portfolio End -->
+      </div>
+    </section>
 
-
-    <!-- Testimonial Start -->
-    <!-- <div class="container-fluid py-5" id="testimonial">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <section id="contact">
+      <div class="wrap">
+        <div class="contact-box reveal">
+          <div><div class="kicker">Let's connect</div><h2>Have an IT opportunity or a technical challenge?</h2><p>I'm interested in connecting with IT teams and recruiters looking for practical systems administration, infrastructure support, networking, and automation experience.</p></div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <!-- Replace the placeholder email and LinkedIn URL before publishing. -->
+            <a class="button primary" href="mailto:m.irshad.career@gmail.com">Email me ↗</a>
+            <a class="button secondary" href="https://linkedin.com/in/irshad21" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+          </div>
         </div>
-    </div> -->
-    <!-- Testimonial End -->
- 
+      </div>
+    </section>
+  </main>
 
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="contact-form text-center">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
-                                        required="required" data-validation-required-message="Please enter your name" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
-                                        required="required" data-validation-required-message="Please enter your email" />
-                                    <p class="help-block text-danger"></p>
-                                </div>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-outline-primary" type="submit" id="sendMessageButton">Send
-                                    Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Contact End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-primary text-white mt-5 py-1 px-sm-1 px-md-5">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/mohammed-irshad-a9169113a/"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <div class="d-flex justify-content-center mb-3">
-                <a class="text-white" href="#">Privacy</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Terms</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">FAQs</a>
-                <span class="px-3">|</span>
-                <a class="text-white" href="#">Help</a>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-    <!-- Scroll to Bottom -->
-    <i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Contact Javascript File -->
-    <script src="mail/jqBootstrapValidation.min.js"></script>
-    <script src="mail/contact.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Irshad. Built with clarity and care.</span><span>IT Infrastructure · Systems Administration · Automation</span></div></footer>
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    menuToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
+      menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      menuToggle.textContent = open ? '✕' : '☰';
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open navigation menu');
+      menuToggle.textContent = '☰';
+    }));
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
 </body>
-
 </html>
