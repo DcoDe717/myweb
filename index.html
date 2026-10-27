@@ -4,10 +4,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0b1020">
-  <meta name="description" content="Irshad — IT Infrastructure and Systems Administrator in the UAE. Systems, networking, security, backup, virtualization and automation.">
-  <meta property="og:title" content="Irshad | IT Infrastructure & Systems Administration">
-  <meta property="og:description" content="Practical IT infrastructure, systems administration, networking and automation.">
-  <title>Irshad | IT Infrastructure & Systems Administration</title>
+  <title>Mohammed Irshad | IT Infrastructure &amp; Systems Administrator, Dubai</title>
+  <meta name="description" content="Mohammed Irshad — IT Infrastructure and Systems Administrator in Dubai, UAE with 6+ years of experience in Windows Server, Active Directory, VMware, HPE servers, SonicWall firewalls and VPN, backup and recovery, and PowerShell automation.">
+  <meta name="author" content="Mohammed Irshad">
+  <link rel="canonical" href="https://iamirshad.me/">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://iamirshad.me/">
+  <meta property="og:title" content="Mohammed Irshad | IT Infrastructure &amp; Systems Administrator">
+  <meta property="og:description" content="6+ years in systems administration, networking, virtualization, backup and automation. Based in Dubai, UAE.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%235eead4'/%3E%3Cstop offset='1' stop-color='%237c9cff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='16' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='26' font-weight='800' text-anchor='middle' fill='%2307101b'%3EMI%3C/text%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Irshad",
+    "jobTitle": "IT Infrastructure / Systems Administrator",
+    "url": "https://iamirshad.me/",
+    "email": "mailto:m.irshad.career@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+    "worksFor": { "@type": "Organization", "name": "Lutfi Group of Companies" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Anna University" },
+    "sameAs": ["https://linkedin.com/in/irshad21"],
+    "knowsAbout": ["Windows Server", "Active Directory", "Group Policy", "VMware vSphere", "HPE ProLiant", "SonicWall", "VPN", "Backup and Disaster Recovery", "PowerShell", "Python"]
+  }
+  </script>
+  <script>document.documentElement.classList.add('js');</script>
   <style>
     :root {
       --bg: #080d19;
@@ -103,9 +125,31 @@
     .contact-box p { color: var(--muted); max-width: 620px; }
     footer { border-top: 1px solid var(--line); padding: 25px 0 35px; color: var(--muted); font-size: .82rem; }
     .footer-inner { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
-    .reveal { opacity: 0; transform: translateY(14px); transition: opacity .65s ease, transform .65s ease; }
-    .reveal.visible { opacity: 1; transform: none; }
+    html.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .65s ease, transform .65s ease; }
+    html.js .reveal.visible { opacity: 1; transform: none; }
     :focus-visible { outline: 2px solid var(--accent-2); outline-offset: 4px; }
+    /* additions */
+    .button, .nav-cta { white-space: nowrap; }
+    .project-wide { grid-column: 1 / -1; }
+    .experience-summary { align-self: start; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 34px; max-width: 620px; }
+    .stat { border: 1px solid var(--line); background: rgba(255,255,255,.03); border-radius: 14px; padding: 12px 14px; }
+    .stat b { display: block; font-size: 1.45rem; letter-spacing: -.04em; line-height: 1.1; }
+    .stat small { display: block; color: var(--muted); font-size: .74rem; margin-top: 3px; line-height: 1.35; }
+    .project-metric { display: inline-block; margin-top: 14px; color: var(--accent-2); font-size: .82rem; font-weight: 700; }
+    .role { position: relative; }
+    .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 6px 16px; flex-wrap: wrap; }
+    .role-head h3 { margin: 0; }
+    .role-company { color: #c6d5ff; font-weight: 600; font-size: .95rem; }
+    .role-date { color: var(--muted); font-size: .82rem; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    .role ul { margin: 10px 0 0; padding-left: 18px; color: var(--muted); font-size: .93rem; }
+    .role li { margin: 5px 0; }
+    .role li::marker { color: var(--accent-2); }
+    .edu { margin-top: 18px; padding-top: 18px; border-top: 1px solid var(--line); }
+    .edu p { margin: 4px 0 0; color: var(--muted); font-size: .9rem; }
+    .contact-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 6px; color: var(--muted); font-size: .92rem; }
+    .contact-list a:hover { color: var(--text); text-decoration: underline; }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 10px; }
     @media (prefers-reduced-motion: reduce) { *, *:before, *:after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } .reveal { opacity: 1; transform: none; } }
     @media (max-width: 850px) {
       .hero { grid-template-columns: 1fr; gap: 42px; padding-top: 70px; min-height: auto; }
@@ -132,48 +176,55 @@
       .status-grid { gap: 8px; }
       .terminal-card { padding: 17px; }
       .footer-inner { flex-direction: column; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .contact-actions .button { flex: 1 1 auto; }
     }
   </style>
 </head>
 <body>
   <div class="nav-shell">
     <nav class="wrap" aria-label="Main navigation">
-      <a class="brand" href="#home" aria-label="Irshad home"><span class="brand-mark">IR</span><span>Irshad<span style="color:var(--accent-2)">.</span></span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false">☰</button>
+      <a class="brand" href="#home" aria-label="Mohammed Irshad home"><span class="brand-mark">MI</span><span>Irshad<span style="color:var(--accent-2)">.</span></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">☰</button>
       <div class="nav-links" id="navLinks">
-        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
       </div>
-      <a class="nav-cta" href="#contact">Let's connect <span aria-hidden="true">↗</span></a>
+      <a class="nav-cta" href="Mohammed_Irshad_CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
     </nav>
   </div>
 
   <main>
     <header class="hero wrap" id="home">
       <div class="reveal">
-        <div class="eyebrow">IT Infrastructure &amp; Systems Administration</div>
+        <div class="eyebrow">IT Infrastructure &amp; Systems Administrator · Dubai</div>
         <h1>Keeping business IT <span class="gradient-text">secure, reliable,</span> and running.</h1>
-        <p class="hero-copy">I'm Irshad, an IT professional in the UAE focused on <strong>systems administration, networking, infrastructure support, backup and recovery, and practical automation.</strong> I help keep the technology people rely on working smoothly.</p>
+        <p class="hero-copy">I'm <strong>Mohammed Irshad</strong>, a Systems Administrator with 6+ years of experience across <strong>Windows Server, Active Directory, VMware, HPE servers, SonicWall firewalls and VPN, backup and recovery, and PowerShell automation</strong>. I currently run multi-site infrastructure for Lutfi Group of Companies in Dubai.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↓</span></a>
+          <a class="button primary" href="Mohammed_Irshad_CV.pdf" download>Download CV <span aria-hidden="true">↓</span></a>
           <a class="button secondary" href="#contact">Contact me <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="micro-trust"><span><i class="dot"></i> Hands-on IT operations</span><span><i class="dot"></i> Infrastructure &amp; support</span><span><i class="dot"></i> Automation mindset</span></div>
+        <div class="stats" aria-label="Key figures">
+          <div class="stat"><b>6+</b><small>years in IT</small></div>
+          <div class="stat"><b>100</b><small>users supported</small></div>
+          <div class="stat"><b>4</b><small>sites, 6 servers</small></div>
+          <div class="stat"><b>120</b><small>CCTV cameras, 15 sites</small></div>
+        </div>
       </div>
-      <div class="terminal-card reveal" aria-label="Illustrative IT infrastructure terminal panel">
-        <div class="terminal-top"><span class="lights"><i></i><i></i><i></i></span><span>infra-overview.sh</span><span>● operational mindset</span></div>
+      <div class="terminal-card reveal" aria-label="Illustrative terminal summarising Mohammed Irshad's focus areas">
+        <div class="terminal-top"><span class="lights"><i></i><i></i><i></i></span><span>infra-overview.ps1</span><span>● open to roles</span></div>
         <div class="terminal-body">
-          <div class="terminal-line"><span class="prompt">$</span><span>whoami</span></div>
-          <div class="terminal-line"><span>irshad — systems administrator</span></div>
-          <div class="terminal-line"><span class="prompt">$</span><span>focus --areas</span></div>
-          <div class="terminal-line"><span class="terminal-comment"># systems · network · security · recovery</span></div>
-          <div class="terminal-line"><span class="prompt">$</span><span>automation --enabled</span></div>
-          <div class="terminal-line"><span>PowerShell / scripting / repeatable workflows</span></div>
-          <div class="terminal-line"><span class="prompt">$</span><span>status --goal</span></div>
+          <div class="terminal-line"><span class="prompt">PS&gt;</span><span>whoami</span></div>
+          <div class="terminal-line"><span>mohammed irshad — systems administrator, dubai</span></div>
+          <div class="terminal-line"><span class="prompt">PS&gt;</span><span>Get-Stack</span></div>
+          <div class="terminal-line"><span class="terminal-comment"># Windows Server · AD/GPO · VMware · HPE iLO · SonicWall</span></div>
+          <div class="terminal-line"><span class="prompt">PS&gt;</span><span>Get-Automation</span></div>
+          <div class="terminal-line"><span>PowerShell · Python · AutoHotkey → 4–5 hrs saved / week</span></div>
+          <div class="terminal-line"><span class="prompt">PS&gt;</span><span>Get-Goal</span></div>
           <div class="terminal-line"><span style="color:var(--accent-2)">Build reliable, supportable IT.</span></div>
         </div>
         <div class="status-grid">
-          <div class="status"><small>CORE</small><b>Systems &amp; servers</b></div>
-          <div class="status"><small>CONNECTIVITY</small><b>Networks &amp; VPN</b></div>
+          <div class="status"><small>CORE</small><b>Windows Server &amp; AD</b></div>
+          <div class="status"><small>CONNECTIVITY</small><b>SonicWall &amp; VPN</b></div>
           <div class="status"><small>RESILIENCE</small><b>Backup &amp; recovery</b></div>
           <div class="status"><small>EFFICIENCY</small><b>Scripts &amp; automation</b></div>
         </div>
@@ -182,7 +233,7 @@
 
     <section id="about">
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="kicker">A little about me</div><h2>Practical IT, from endpoint to infrastructure.</h2></div><p class="section-intro">A hands-on approach to keeping users productive and business systems dependable.</p></div>
+        <div class="section-head reveal"><div><div class="kicker">About me</div><h2>Practical IT, from endpoint to infrastructure.</h2></div><p class="section-intro">From user issues and network links to servers, backups, and the scripts that keep them running.</p></div>
         <div class="about-grid">
           <div class="panel about-callout reveal">
             <div><div class="kicker">My approach</div><p class="big-quote">“Solve the root cause. Document the fix. Make the next incident easier.”</p></div>
@@ -190,9 +241,9 @@
           </div>
           <div class="panel reveal">
             <h3>What I bring</h3>
-            <p class="subtle">My experience spans end-user support, Windows and Linux environments, VMware infrastructure, network troubleshooting, server hardware, RAID/storage, firewalls, VPNs, and scripting. I enjoy connecting the day-to-day needs of users with the systems and processes that support the business.</p>
-            <p class="subtle">I value clear documentation, sensible security, reliable backups, and automation that reduces repetitive work. My focus is on building an IT environment that is easier to support, maintain, and recover.</p>
-            <div class="tag-row"><span class="tag">Windows &amp; Linux</span><span class="tag">VMware</span><span class="tag">Networking</span><span class="tag">PowerShell</span><span class="tag">IT operations</span></div>
+            <p class="subtle">I started in Dell field service, moved into enterprise IT support and VMware administration at Samsung R&amp;D Institute India, and since 2024 have been the System Administrator at Lutfi Group of Companies in Dubai, where I look after servers, Active Directory, firewalls and VPNs, backups, CCTV, and day-to-day support for around 100 users across multiple sites.</p>
+            <p class="subtle">I value clear documentation, sensible security, tested backups, and automation that removes repetitive work. My goal is an IT environment that is easy to support, maintain, and recover.</p>
+            <div class="tag-row"><span class="tag">Windows &amp; Linux</span><span class="tag">VMware</span><span class="tag">SonicWall</span><span class="tag">HPE ProLiant</span><span class="tag">PowerShell</span><span class="tag">Python</span><span class="tag">Docker</span></div>
           </div>
         </div>
       </div>
@@ -200,40 +251,81 @@
 
     <section id="expertise">
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="kicker">Technical expertise</div><h2>The systems behind the business.</h2></div><p class="section-intro">Core areas of practice. Specific tools and platforms should reflect the work I have personally delivered.</p></div>
+        <div class="section-head reveal"><div><div class="kicker">Technical expertise</div><h2>The systems behind the business.</h2></div><p class="section-intro">The platforms and tools I work with day to day.</p></div>
         <div class="skills-grid">
-          <article class="skill-card reveal"><div class="skill-icon">▣</div><h3>Systems Administration</h3><p>Windows Server, Active Directory, Group Policy, DNS, DHCP, user administration and endpoint support.</p></article>
-          <article class="skill-card reveal"><div class="skill-icon">⌘</div><h3>Networking &amp; Security</h3><p>LAN/WAN troubleshooting, firewalls, VPN connectivity, routing, switching and network services.</p></article>
-          <article class="skill-card reveal"><div class="skill-icon">▤</div><h3>Virtualization &amp; Servers</h3><p>VMware ESXi/vSphere, server deployment, hardware diagnostics, operating systems and maintenance.</p></article>
-          <article class="skill-card reveal"><div class="skill-icon">↻</div><h3>Backup &amp; Recovery</h3><p>Backup operations, storage planning, RAID troubleshooting, recovery readiness and data protection.</p></article>
-          <article class="skill-card reveal"><div class="skill-icon">&gt;_</div><h3>Automation &amp; Containers</h3><p>PowerShell scripting, scheduled tasks, repeatable admin workflows and Docker-based services.</p></article>
-          <article class="skill-card reveal"><div class="skill-icon">◎</div><h3>IT Support &amp; Operations</h3><p>Help desk, hardware/software troubleshooting, monitoring, asset administration and documentation.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon" aria-hidden="true">▣</div><h3>Systems Administration</h3><p>Windows Server 2016/2022, Linux, Active Directory, Group Policy, DNS, DHCP, Microsoft 365, patch management.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon" aria-hidden="true">⌘</div><h3>Networking &amp; Security</h3><p>SonicWall firewall policies, NAT, port forwarding, site-to-site and remote-access VPN, LAN/WAN, TCP/IP troubleshooting.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon" aria-hidden="true">▤</div><h3>Virtualization &amp; Servers</h3><p>VMware ESXi, vSphere, vCenter, HPE ProLiant, Dell PowerEdge, iLO, iDRAC, RAID and storage troubleshooting.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon" aria-hidden="true">↻</div><h3>Backup &amp; Recovery</h3><p>Scripted backups, disaster recovery planning, regular restore testing, and infrastructure health monitoring.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon" aria-hidden="true">&gt;_</div><h3>Automation &amp; Containers</h3><p>PowerShell, Python, AutoHotkey, scheduled tasks, and Docker-based self-hosted services for repeatable admin work.</p></article>
+          <article class="skill-card reveal"><div class="skill-icon" aria-hidden="true">◎</div><h3>Support &amp; Operations</h3><p>Level 1–3 support, GLPI and Snipe-IT asset and help desk tools, BookStack documentation, CCTV/NVR systems.</p></article>
         </div>
       </div>
     </section>
 
     <section id="projects">
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="kicker">Selected work</div><h2>Projects &amp; practical experience.</h2></div><p class="section-intro">A portfolio of technical work, written as case studies rather than a list of tools.</p></div>
+        <div class="section-head reveal"><div><div class="kicker">Selected work</div><h2>What I've built and run.</h2></div><p class="section-intro">Highlights from my current role and hands-on infrastructure work.</p></div>
         <div class="projects-grid">
-          <article class="project-card reveal"><div class="project-number">PROJECT / 01</div><h3>IT Documentation Platform</h3><p>Planning and deploying a self-hosted documentation platform to organize infrastructure notes, procedures and troubleshooting knowledge in one place.</p><div class="tag-row"><span class="tag">Docker</span><span class="tag">BookStack</span><span class="tag">Documentation</span></div><div class="project-note">Case-study outline — add verified implementation details and screenshots before publishing.</div></article>
-          <article class="project-card reveal"><div class="project-number">PROJECT / 02</div><h3>IT Asset &amp; Help Desk Tools</h3><p>Working with self-hosted IT service and asset-management tools to make support information, assets and operational tasks easier to track.</p><div class="tag-row"><span class="tag">GLPI</span><span class="tag">Snipe-IT</span><span class="tag">IT operations</span></div><div class="project-note">Case-study outline — document what is live, what is in testing, and the resulting benefits.</div></article>
-          <article class="project-card reveal"><div class="project-number">PROJECT / 03</div><h3>Server &amp; Storage Administration</h3><p>Server hardware diagnostics and maintenance involving HPE infrastructure, storage controllers, drive health, RAID considerations and backup planning.</p><div class="tag-row"><span class="tag">HPE ProLiant</span><span class="tag">RAID</span><span class="tag">Storage</span></div><div class="project-note">Keep company names, internal IPs, serial numbers and sensitive configuration details private.</div></article>
-          <article class="project-card reveal"><div class="project-number">PROJECT / 04</div><h3>PowerShell Administration</h3><p>Using scripts and scheduled workflows to reduce repetitive administration and improve consistency in routine IT tasks.</p><div class="tag-row"><span class="tag">PowerShell</span><span class="tag">Automation</span><span class="tag">Windows</span></div><div class="project-note">Add a sanitized example script, the problem it solves, and measurable results where available.</div></article>
+          <article class="project-card reveal"><div class="project-number">01 / NETWORK</div><h3>Multi-site Firewall &amp; VPN</h3><p>Configure and maintain SonicWall firewall policies, NAT, and port forwarding, and keep site-to-site tunnels and remote-access VPN running for staff working away from the office.</p><span class="project-metric">5 site-to-site tunnels · 40 remote VPN users</span><div class="tag-row"><span class="tag">SonicWall</span><span class="tag">VPN</span><span class="tag">NAT</span></div></article>
+          <article class="project-card reveal"><div class="project-number">02 / SERVERS</div><h3>Windows Server Estate</h3><p>Administer production and backup Windows Servers across four sites, covering maintenance, security patching, performance, and HPE ProLiant hardware health through iLO.</p><span class="project-metric">6 servers · 4 sites · 100 users</span><div class="tag-row"><span class="tag">Windows Server 2016/2022</span><span class="tag">HPE ProLiant</span><span class="tag">iLO</span></div></article>
+          <article class="project-card reveal"><div class="project-number">03 / RESILIENCE</div><h3>Scripted Backup &amp; Recovery</h3><p>Automated PowerShell backup jobs with regular restore tests, so recovery is proven rather than assumed. Paired with ongoing infrastructure health monitoring.</p><span class="project-metric">Backups verified by regular restore tests</span><div class="tag-row"><span class="tag">PowerShell</span><span class="tag">Disaster recovery</span><span class="tag">Monitoring</span></div></article>
+          <article class="project-card reveal"><div class="project-number">04 / AUTOMATION</div><h3>IT Automation Toolkit</h3><p>PowerShell, Python, and AutoHotkey scripts for server health checks, backups, and an internal IT utility tool that bundles common support tasks.</p><span class="project-metric">4–5 hours of manual work saved per week</span><div class="tag-row"><span class="tag">PowerShell</span><span class="tag">Python</span><span class="tag">AutoHotkey</span></div></article>
+          <article class="project-card reveal"><div class="project-number">05 / IDENTITY &amp; SUPPORT</div><h3>Active Directory &amp; Service Desk</h3><p>Manage Active Directory and Group Policy, including provisioning and access control, and provide Level 1–3 support across hardware, software, networking, and business systems.</p><span class="project-metric">100 users · 100–120 tickets per month</span><div class="tag-row"><span class="tag">Active Directory</span><span class="tag">Group Policy</span><span class="tag">Service desk</span></div></article>
+          <article class="project-card reveal"><div class="project-number">06 / SECURITY</div><h3>CCTV / NVR Infrastructure</h3><p>Install, maintain, and troubleshoot CCTV and NVR systems, including network integration and storage management across company locations.</p><span class="project-metric">120 cameras · 15 sites</span><div class="tag-row"><span class="tag">CCTV</span><span class="tag">NVR</span><span class="tag">Network integration</span></div></article>
+          <article class="project-card project-wide reveal"><div class="project-number">07 / SELF-HOSTED TOOLS</div><h3>IT Documentation, Asset &amp; Help Desk Platforms</h3><p>Deploying and running self-hosted tools in Docker: BookStack as a central knowledge base for infrastructure notes, procedures, and troubleshooting fixes, and GLPI and Snipe-IT to track IT assets, support tickets, and operational tasks in one place.</p><span class="project-metric">Docs, assets, and tickets in one self-hosted stack</span><div class="tag-row"><span class="tag">Docker</span><span class="tag">BookStack</span><span class="tag">GLPI</span><span class="tag">Snipe-IT</span><span class="tag">Documentation</span></div></article>
         </div>
       </div>
     </section>
 
     <section id="experience">
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="kicker">Experience &amp; working style</div><h2>Reliable operations are a team effort.</h2></div><p class="section-intro">A clear, honest summary of the work areas I support—without inventing titles, dates or performance metrics.</p></div>
+        <div class="section-head reveal"><div><div class="kicker">Experience</div><h2>6+ years, from field service to infrastructure.</h2></div><p class="section-intro"><a class="button secondary" href="Mohammed_Irshad_CV.pdf" download>Download full CV <span aria-hidden="true">↓</span></a></p></div>
         <div class="experience-layout">
-          <div class="experience-summary reveal"><div class="kicker">Focus</div><h3 style="font-size:1.4rem;margin-top:12px">End-to-end IT support</h3><p class="subtle">From user issues and network connectivity to servers, backups, and operational documentation.</p><div class="tag-row"><span class="tag">Support</span><span class="tag">Administration</span><span class="tag">Troubleshooting</span></div></div>
+          <div class="experience-summary reveal">
+            <div class="kicker">Focus</div>
+            <h3 style="font-size:1.4rem;margin-top:12px">End-to-end IT operations</h3>
+            <p class="subtle">From user issues and network connectivity to servers, backups, and automation.</p>
+            <div class="tag-row"><span class="tag">Administration</span><span class="tag">Infrastructure</span><span class="tag">Support</span></div>
+            <div class="edu">
+              <div class="kicker">Education</div>
+              <h3 style="margin-top:8px">B.E. Computer Science</h3>
+              <p>Anna University, Chennai · 2015 – 2019</p>
+            </div>
+            <div class="edu">
+              <div class="kicker">Languages</div>
+              <p>English, Hindi (proficient) · Arabic (beginner)</p>
+            </div>
+          </div>
           <div class="timeline reveal">
-            <div class="timeline-item"><h3>Systems &amp; Infrastructure</h3><p>Support and administration across Windows/Linux systems, virtualization, server hardware, storage, and core network services.</p></div>
-            <div class="timeline-item"><h3>Network &amp; End-user Support</h3><p>Troubleshooting connectivity, VPNs, firewalls, user devices, printers, and business technology across operational environments.</p></div>
-            <div class="timeline-item"><h3>Documentation &amp; Improvement</h3><p>Creating repeatable procedures, recording fixes, and using scripting to reduce avoidable manual work.</p></div>
-            <p class="project-note">Add your verified employer names, job titles, and employment dates here to align this section with your current CV.</p>
+            <div class="timeline-item role">
+              <div class="role-head"><h3>System Administrator</h3><span class="role-date">Jul 2024 – Present</span></div>
+              <div class="role-company">Lutfi Group of Companies · Dubai, UAE</div>
+              <ul>
+                <li>Administer 6 Windows Servers across 4 sites for 100 users, including patching, security, and performance.</li>
+                <li>Manage Active Directory and Group Policy, provisioning, and access control.</li>
+                <li>Run SonicWall firewalls, 5 site-to-site VPN tunnels, and remote-access VPN for 40 users.</li>
+                <li>Automate backups and admin tasks with PowerShell, Python, and AutoHotkey, saving 4–5 hours a week.</li>
+                <li>Provide Level 1–3 support, resolving 100–120 tickets a month; maintain 120 CCTV cameras across 15 sites.</li>
+              </ul>
+            </div>
+            <div class="timeline-item role">
+              <div class="role-head"><h3>IT Service Engineer</h3><span class="role-date">Nov 2022 – May 2024</span></div>
+              <div class="role-company">Samsung R&amp;D Institute India · Bangalore</div>
+              <ul>
+                <li>Managed and optimized VMware ESXi/vSphere environments through vCenter.</li>
+                <li>Configured Dell and HP servers and workstations, including rack installation, OS deployment, and RAID.</li>
+                <li>Provided enterprise support across Windows and Linux, and automated recurring admin tasks.</li>
+              </ul>
+            </div>
+            <div class="timeline-item role">
+              <div class="role-head"><h3>Field Service Engineer</h3><span class="role-date">Aug 2020 – Nov 2022</span></div>
+              <div class="role-company">TVS Electronics (Dell Field Services) · Bangalore</div>
+              <ul>
+                <li>Diagnosed and serviced Dell laptops, desktops, and peripherals for enterprise clients.</li>
+                <li>Performed Windows/Linux setup and maintenance, and supported SLA compliance.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -242,43 +334,49 @@
     <section id="contact">
       <div class="wrap">
         <div class="contact-box reveal">
-          <div><div class="kicker">Let's connect</div><h2>Have an IT opportunity or a technical challenge?</h2><p>I'm interested in connecting with IT teams and recruiters looking for practical systems administration, infrastructure support, networking, and automation experience.</p></div>
-          <div style="display:flex;flex-wrap:wrap;gap:10px">
-            <!-- Replace the placeholder email and LinkedIn URL before publishing. -->
+          <div>
+            <div class="kicker">Let's connect</div>
+            <h2>Hiring for IT infrastructure or systems administration?</h2>
+            <p>I'm open to systems administrator and infrastructure roles in the UAE. Based in Dubai with a UAE driving licence.</p>
+            <ul class="contact-list">
+              <li>Email: <a href="mailto:m.irshad.career@gmail.com">m.irshad.career@gmail.com</a></li>
+              <li>LinkedIn: <a href="https://linkedin.com/in/irshad21" target="_blank" rel="noopener noreferrer">linkedin.com/in/irshad21</a></li>
+            </ul>
+          </div>
+          <div class="contact-actions">
             <a class="button primary" href="mailto:m.irshad.career@gmail.com">Email me ↗</a>
             <a class="button secondary" href="https://linkedin.com/in/irshad21" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <a class="button secondary" href="Mohammed_Irshad_CV.pdf" download>CV ↓</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer><div class="wrap footer-inner"><span>© <span id="year"></span> Irshad. Built with clarity and care.</span><span>IT Infrastructure · Systems Administration · Automation</span></div></footer>
+  <footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> Mohammed Irshad · Dubai, UAE</span><span>IT Infrastructure · Systems Administration · Automation</span></div></footer>
   <script>
     const menuToggle = document.getElementById('menuToggle');
     const navLinks = document.getElementById('navLinks');
-    menuToggle.addEventListener('click', () => {
-      const open = navLinks.classList.toggle('open');
+    function setMenu(open) {
+      navLinks.classList.toggle('open', open);
       menuToggle.setAttribute('aria-expanded', String(open));
       menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
       menuToggle.textContent = open ? '✕' : '☰';
-    });
-    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      menuToggle.setAttribute('aria-expanded', 'false');
-      menuToggle.setAttribute('aria-label', 'Open navigation menu');
-      menuToggle.textContent = '☰';
-    }));
+    }
+    menuToggle.addEventListener('click', () => setMenu(!navLinks.classList.contains('open')));
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
     document.getElementById('year').textContent = new Date().getFullYear();
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    const reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+        });
+      }, { threshold: 0.12 });
+      reveals.forEach(el => observer.observe(el));
+    } else {
+      reveals.forEach(el => el.classList.add('visible'));
+    }
   </script>
 </body>
 </html>
