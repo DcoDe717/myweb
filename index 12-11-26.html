@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#F1F3F5" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#171C22" media="(prefers-color-scheme: dark)">
+  <title>Mohammed Irshad | IT Infrastructure &amp; Systems Administrator, Dubai</title>
+  <meta name="description" content="Mohammed Irshad — IT Infrastructure and Systems Administrator in Dubai, UAE with 6+ years of experience in Windows Server, Active Directory, VMware, HPE servers, SonicWall firewalls and VPN, backup and recovery, and PowerShell automation.">
+  <meta name="author" content="Mohammed Irshad">
+  <link rel="canonical" href="https://iamirshad.me/">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Mohammed Irshad">
+  <meta property="og:locale" content="en_AE">
+  <meta property="og:url" content="https://iamirshad.me/">
+  <meta property="og:title" content="Mohammed Irshad | IT Infrastructure &amp; Systems Administrator">
+  <meta property="og:description" content="6+ years in systems administration, networking, virtualization, backup and automation. Based in Dubai, UAE.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Mohammed Irshad | IT Infrastructure &amp; Systems Administrator">
+  <meta name="twitter:description" content="6+ years in systems administration, networking, virtualization, backup and automation. Based in Dubai, UAE.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%23FFD21F'/%3E%3Ctext x='32' y='43' font-family='Arial Narrow,Arial,sans-serif' font-size='30' font-weight='700' text-anchor='middle' fill='%2317212B'%3EMI%3C/text%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammed Irshad",
+    "jobTitle": "IT Infrastructure / Systems Administrator",
+    "url": "https://iamirshad.me/",
+    "email": "mailto:m.irshad.career@gmail.com",
+    "address": { "@type": "PostalAddress", "addressLocality": "Dubai", "addressCountry": "AE" },
+    "worksFor": { "@type": "Organization", "name": "Lutfi Group of Companies" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "Anna University" },
+    "sameAs": ["https://linkedin.com/in/irshad21"],
+    "knowsAbout": ["Windows Server", "Active Directory", "Group Policy", "VMware vSphere", "HPE ProLiant", "SonicWall", "VPN", "Backup and Disaster Recovery", "PowerShell", "Python"]
+  }
+  </script>
+  <script>
+    // Apply the saved theme before first paint. Falls back to the system setting.
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      if (saved === 'light' || saved === 'dark') document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    /* ---------- Tokens ---------- */
+    :root {
+      color-scheme: light;
+      --bg: #F1F3F5;          /* cable-tray grey */
+      --surface: #FFFFFF;
+      --ink: #17212B;         /* rack graphite */
+      --muted: #56626F;
+      --line: #D3D9DF;
+      --blue: #1553C7;        /* Cat6 blue: links and tunnels */
+      --tape: #FFD21F;        /* label-tape yellow */
+      --tape-hover: #F2C200;
+      --tape-ink: #17212B;
+      --led: #17A05A;
+      --band-bg: #17212B;
+      --band-ink: #F1F3F5;
+      --band-muted: #B5BFCA;
+      --band-line: #3A4653;
+      --display: "Barlow Condensed", "Roboto Condensed", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+      --body: Barlow, "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+      --max: 1120px;
+    }
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #171C22; --surface: #1F262E; --ink: #E9EDF1; --muted: #A3AEBA; --line: #343E49;
+      --blue: #86B4FF; --led: #3DD68C;
+      --band-bg: #222A33; --band-ink: #E9EDF1; --band-muted: #A3AEBA; --band-line: #3A4653;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root:not([data-theme="light"]) {
+        color-scheme: dark;
+        --bg: #171C22; --surface: #1F262E; --ink: #E9EDF1; --muted: #A3AEBA; --line: #343E49;
+        --blue: #86B4FF; --led: #3DD68C;
+        --band-bg: #222A33; --band-ink: #E9EDF1; --band-muted: #A3AEBA; --band-line: #3A4653;
+      }
+    }
+
+    /* ---------- Base ---------- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0; background: var(--bg); color: var(--ink);
+      font-family: var(--body); font-size: 1.0625rem; line-height: 1.6;
+      -webkit-font-smoothing: antialiased; font-variant-numeric: tabular-nums;
+    }
+    a { color: inherit; }
+    p { margin: 0; }
+    h1, h2, h3 { margin: 0; }
+    ul, ol, dl, dd { margin: 0; padding: 0; }
+    ul, ol { list-style: none; }
+    button { font: inherit; color: inherit; -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; border-radius: 3px; }
+    .wrap { width: min(var(--max), calc(100% - 48px)); margin-inline: auto; }
+    .skip { position: absolute; left: 12px; top: -60px; z-index: 30; padding: 10px 14px; border-radius: 6px; background: var(--tape); color: var(--tape-ink); font-weight: 600; text-decoration: none; }
+    .skip:focus { top: 12px; }
+    .text-link { color: var(--blue); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+    .text-link:hover { text-decoration-thickness: 2px; }
+
+    /* ---------- Buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      min-height: 46px; padding: 10px 18px; border-radius: 6px; border: 1.5px solid var(--ink);
+      background: transparent; color: var(--ink); font-weight: 600; font-size: 1rem; line-height: 1.2;
+      text-decoration: none; white-space: nowrap; cursor: pointer; transition: background-color .15s, border-color .15s, color .15s;
+    }
+    .btn:hover { background: var(--ink); color: var(--bg); }
+    .btn-primary { background: var(--tape); border-color: var(--tape); color: var(--tape-ink); }
+    .btn-primary:hover { background: var(--tape-hover); border-color: var(--tape-hover); color: var(--tape-ink); }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+    .btn-small { min-height: 40px; padding: 8px 14px; font-size: .9375rem; }
+
+    /* ---------- Navigation ---------- */
+    .site-nav { position: sticky; top: 0; z-index: 20; background: color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid var(--line); }
+    .nav-row { min-height: 66px; display: flex; align-items: center; gap: 20px; }
+    .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; text-decoration: none; margin-right: auto; }
+    .brand-tag { display: grid; place-items: center; width: 38px; height: 26px; border-radius: 3px; background: var(--tape); color: var(--tape-ink); font-family: var(--display); font-size: 1.05rem; font-weight: 600; letter-spacing: .02em; }
+    .nav-links { display: flex; align-items: center; gap: 4px; }
+    .nav-links a { padding: 8px 11px; border-radius: 6px; color: var(--muted); font-size: .9688rem; font-weight: 500; text-decoration: none; }
+    .nav-links a:hover { color: var(--ink); }
+    .nav-links a[aria-current="true"] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--ink); border-radius: 0; }
+    .icon-btn { display: grid; place-items: center; width: 40px; height: 40px; border-radius: 6px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
+    .icon-btn:hover { border-color: var(--ink); }
+    .icon-btn svg { width: 18px; height: 18px; }
+    .menu-toggle { display: none; }
+    .menu-toggle .close-icon { display: none; }
+    .menu-toggle[aria-expanded="true"] .open-icon { display: none; }
+    .menu-toggle[aria-expanded="true"] .close-icon { display: block; }
+
+    /* ---------- Hero ---------- */
+    .hero { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: center; gap: 56px; padding-block: 72px 56px; }
+    .hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(3.4rem, 8.6vw, 6.75rem); line-height: .9; letter-spacing: -.012em; }
+    .hero-role { margin-top: 26px; font-size: clamp(1.25rem, 2.1vw, 1.5rem); line-height: 1.35; font-weight: 500; max-width: 28ch; }
+    .hero-copy { margin-top: 16px; color: var(--muted); max-width: 56ch; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .availability { display: flex; align-items: flex-start; gap: 10px; margin-top: 22px; font-size: .9688rem; color: var(--muted); }
+    .led { flex: none; width: 9px; height: 9px; margin-top: .5em; border-radius: 50%; background: var(--led); box-shadow: 0 0 0 4px color-mix(in srgb, var(--led) 22%, transparent); }
+
+    /* Network diagram: 5 tunnels and 40 remote users, drawn to count */
+    .topology { margin: 0; }
+    .topology svg { display: block; width: 100%; max-width: 460px; height: auto; margin-inline: auto; overflow: visible; }
+    .ring { fill: none; stroke: var(--line); stroke-width: 1; }
+    .remote circle { fill: var(--muted); }
+    .tunnel-case { fill: none; stroke: color-mix(in srgb, var(--blue) 18%, transparent); stroke-width: 9; stroke-linecap: round; }
+    .tunnel { fill: none; stroke: var(--blue); stroke-width: 2; stroke-dasharray: 1; stroke-dashoffset: 0; animation: tunnel-draw .7s cubic-bezier(.2,.7,.2,1) both; animation-delay: calc(var(--i) * 90ms + 250ms); }
+    .site rect { fill: var(--surface); stroke: var(--ink); stroke-width: 2; }
+    .site path { fill: none; stroke: var(--ink); stroke-width: 2; stroke-linecap: round; }
+    .site { animation: node-in .4s ease-out both; animation-delay: calc(var(--i) * 90ms + 700ms); }
+    .hub rect { fill: var(--ink); }
+    .hub path { fill: none; stroke: var(--bg); stroke-width: 2.5; stroke-linecap: round; opacity: .55; }
+    .hub .hub-led { fill: var(--led); }
+    .hub .hub-tag { fill: var(--tape); }
+    .packet { fill: var(--tape); stroke: var(--tape-ink); stroke-width: 1.2; opacity: 0; animation: packet 6s linear infinite; animation-delay: calc(var(--i) * 1.2s + 1.6s); }
+    @keyframes tunnel-draw { from { stroke-dashoffset: 1; } }
+    @keyframes node-in { from { opacity: 0; } }
+    @keyframes packet {
+      0% { transform: translate(0, 0); opacity: 0; }
+      6% { opacity: 1; }
+      30% { transform: translate(var(--dx), var(--dy)); opacity: 1; }
+      34%, 100% { transform: translate(var(--dx), var(--dy)); opacity: 0; }
+    }
+    .legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 22px; margin-top: 22px; font-size: .9063rem; color: var(--muted); }
+    .legend li { display: inline-flex; align-items: center; gap: 8px; }
+    .key { flex: none; display: inline-block; }
+    .key-hub { width: 12px; height: 12px; border-radius: 3px; background: var(--ink); }
+    .key-tunnel { width: 20px; height: 2px; background: var(--blue); box-shadow: 0 0 0 3px color-mix(in srgb, var(--blue) 18%, transparent); border-radius: 2px; }
+    .key-remote { width: 7px; height: 7px; border-radius: 50%; background: var(--muted); }
+    .topology figcaption { margin-top: 10px; text-align: center; font-size: .9063rem; color: var(--muted); }
+
+    /* Figures strip */
+    .figures { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .figures div { padding: 20px 20px 20px 0; }
+    .figures div + div { padding-left: 20px; border-left: 1px solid var(--line); }
+    .figures dt { font-family: var(--display); font-weight: 600; font-size: 1.5rem; line-height: 1.15; }
+    .figures dd { margin-top: 2px; color: var(--muted); font-size: .9375rem; line-height: 1.4; }
+
+    /* ---------- Sections ---------- */
+    .section { padding-block: 84px; }
+    .section + .section { border-top: 1px solid var(--line); }
+    .section-grid { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 56px; align-items: start; }
+    .section-head { position: sticky; top: 96px; }
+    .section-head h2, .contact h2 { font-family: var(--display); font-weight: 600; font-size: clamp(2.1rem, 3.6vw, 2.9rem); line-height: 1.04; letter-spacing: -.005em; text-wrap: balance; }
+    .section-head p { margin-top: 14px; color: var(--muted); max-width: 34ch; }
+    .section-head .btn { margin-top: 22px; }
+    h3 { font-size: 1.1875rem; line-height: 1.3; font-weight: 600; }
+
+    /* About */
+    .prose p { max-width: 64ch; }
+    .prose p + p { margin-top: 16px; }
+    .approach { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; margin-top: 36px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); counter-reset: step; }
+    .approach li { padding: 22px; counter-increment: step; }
+    .approach li + li { border-left: 1px solid var(--line); }
+    .approach li::before { content: counter(step); display: grid; place-items: center; width: 28px; height: 28px; margin-bottom: 14px; border-radius: 3px; background: var(--tape); color: var(--tape-ink); font-family: var(--display); font-weight: 600; font-size: 1.1rem; }
+    .approach strong { display: block; font-family: var(--display); font-weight: 600; font-size: 1.5rem; line-height: 1.15; }
+    .approach span { display: block; margin-top: 6px; color: var(--muted); font-size: .9375rem; }
+
+    /* Expertise */
+    .spec div { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 8px 28px; padding-block: 18px; border-top: 1px solid var(--line); }
+    .spec div:first-child { padding-top: 0; border-top: 0; }
+    .spec div:last-child { padding-bottom: 0; }
+    .spec dt { font-weight: 600; }
+    .spec dd { color: var(--muted); max-width: 60ch; }
+
+    /* Work */
+    .work { display: grid; grid-template-columns: minmax(0, 1fr) 210px; gap: 12px 36px; padding-block: 26px; border-top: 1px solid var(--line); }
+    .work:first-child { padding-top: 0; border-top: 0; }
+    .work:last-child { padding-bottom: 0; }
+    .work p { margin-top: 8px; color: var(--muted); max-width: 60ch; }
+    .work-metric { position: relative; padding-left: 20px; font-family: var(--display); font-weight: 600; font-size: 1.3125rem; line-height: 1.22; }
+    .work-metric::before { content: ""; position: absolute; left: 0; top: .32em; width: 10px; height: 10px; border-radius: 2px; background: var(--tape); }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .tags li { padding: 2px 9px; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); font-family: var(--display); font-weight: 500; font-size: .9688rem; letter-spacing: .015em; line-height: 1.5; }
+
+    /* Experience */
+    .role { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 8px 28px; padding-block: 26px; border-top: 1px solid var(--line); }
+    .role:first-child { padding-top: 0; border-top: 0; }
+    .role-date { color: var(--muted); font-size: .9688rem; padding-top: 2px; }
+    .role-date .now { display: inline-flex; align-items: flex-start; gap: 8px; margin-top: 6px; color: var(--ink); font-weight: 500; }
+    .role-company { margin-top: 2px; color: var(--muted); }
+    .role-points { margin-top: 12px; display: grid; gap: 7px; max-width: 62ch; }
+    .role-points li { position: relative; padding-left: 18px; }
+    .role-points li::before { content: ""; position: absolute; left: 0; top: .68em; width: 8px; height: 2px; background: var(--muted); }
+    .extras { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 28px; margin-top: 30px; padding-top: 26px; border-top: 1px solid var(--line); }
+    .extras dt { color: var(--muted); font-size: .9688rem; }
+    .extras dd { margin-top: 4px; }
+    .extras dd strong { font-weight: 600; display: block; }
+
+    /* ---------- Contact band ---------- */
+    .contact { background: var(--band-bg); color: var(--band-ink); padding-block: 84px; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 56px; align-items: end; }
+    .contact p { margin-top: 16px; color: var(--band-muted); max-width: 52ch; }
+    .contact-email { display: inline-block; margin-top: 26px; font-family: var(--display); font-weight: 600; font-size: clamp(1.7rem, 4.2vw, 2.6rem); line-height: 1.1; text-decoration: underline; text-decoration-color: var(--tape); text-decoration-thickness: 3px; text-underline-offset: 8px; overflow-wrap: anywhere; }
+    .contact-email:hover { color: var(--tape); }
+    .contact-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .contact .btn { border-color: var(--band-line); color: var(--band-ink); }
+    .contact .btn:hover { background: var(--band-ink); border-color: var(--band-ink); color: var(--band-bg); }
+    .contact .btn-primary { background: var(--tape); border-color: var(--tape); color: var(--tape-ink); }
+    .contact .btn-primary:hover { background: var(--tape-hover); border-color: var(--tape-hover); color: var(--tape-ink); }
+    .contact :focus-visible { outline-color: var(--tape); }
+
+    /* ---------- Footer ---------- */
+    .site-footer { background: var(--band-bg); color: var(--band-muted); border-top: 1px solid var(--band-line); font-size: .9063rem; }
+    .footer-row { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; padding-block: 22px 28px; }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; gap: 48px; padding-block: 56px 48px; }
+      .hero-role { max-width: 34ch; }
+      .figures { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .figures div:nth-child(4) { padding-left: 0; border-left: 0; }
+      .figures div:nth-child(n+4) { border-top: 1px solid var(--line); }
+      .section-grid { grid-template-columns: 1fr; gap: 30px; }
+      .section-head { position: static; }
+      .section-head p { max-width: 56ch; }
+      .contact-grid { grid-template-columns: 1fr; gap: 34px; align-items: start; }
+    }
+    @media (max-width: 760px) {
+      .menu-toggle { display: grid; }
+      .nav-cv { display: none; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 0; padding: 8px 24px 16px; background: var(--bg); border-bottom: 1px solid var(--line); }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 13px 0; font-size: 1.0625rem; border-bottom: 1px solid var(--line); border-radius: 0; }
+      .nav-links a:last-child { border-bottom: 0; }
+      .nav-links a[aria-current="true"] { box-shadow: none; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: calc(100% - 36px); }
+      .section, .contact { padding-block: 60px; }
+      .hero { padding-block: 44px 40px; }
+      .hero-actions .btn { flex: 1 1 auto; }
+      .figures { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .figures div { padding: 16px 14px 16px 0; }
+      .figures div + div { padding-left: 14px; }
+      .figures div:nth-child(4) { padding-left: 14px; border-left: 1px solid var(--line); }
+      .figures div:nth-child(odd) { padding-left: 0; border-left: 0; }
+      .figures div:nth-child(n+3) { border-top: 1px solid var(--line); }
+      .figures div:last-child { grid-column: 1 / -1; }
+      .approach { grid-template-columns: 1fr; }
+      .approach li + li { border-left: 0; border-top: 1px solid var(--line); }
+      .spec div, .role { grid-template-columns: 1fr; }
+      .work { grid-template-columns: 1fr; }
+      .extras { grid-template-columns: 1fr; }
+      .contact-actions .btn { flex: 1 1 auto; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      .packet { display: none; }
+    }
+    @media print {
+      :root, :root[data-theme="dark"] { --bg: #fff; --surface: #fff; --ink: #000; --muted: #333; --line: #bbb; --blue: #000; --band-bg: #fff; --band-ink: #000; --band-muted: #333; --band-line: #bbb; }
+      body { font-size: 10.5pt; }
+      .site-nav, .topology, .hero-actions, .contact-actions, .section-head .btn, .skip { display: none !important; }
+      .hero { grid-template-columns: 1fr; padding-block: 0 18pt; }
+      .hero h1 { font-size: 34pt; }
+      .section, .contact { padding-block: 18pt; }
+      .section-grid, .contact-grid { grid-template-columns: 1fr; gap: 10pt; }
+      .section-head { position: static; }
+      .work, .role, .approach { break-inside: avoid; }
+      .contact-email { text-decoration: none; font-size: 14pt; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-nav">
+    <nav class="wrap nav-row" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Mohammed Irshad, back to top"><span class="brand-tag" aria-hidden="true">MI</span><span>Mohammed Irshad</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#about">About</a><a href="#expertise">Expertise</a><a href="#projects">Work</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </div>
+      <a class="btn btn-primary btn-small nav-cv" href="Mohammed_Irshad_CV.pdf" download>Download CV</a>
+      <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to dark theme">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></svg>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navLinks">
+        <svg class="open-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="close-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="hero" id="home">
+        <div>
+          <h1>Mohammed Irshad</h1>
+          <p class="hero-role">Systems administrator in Dubai, keeping business IT secure, reliable, and running.</p>
+          <p class="hero-copy">6+ years across Windows Server, Active Directory, VMware, HPE servers, SonicWall firewalls and VPN, backup and recovery, and PowerShell automation. I currently run multi-site infrastructure for Lutfi Group of Companies.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="Mohammed_Irshad_CV.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></svg>
+              Download CV
+            </a>
+            <a class="btn" href="#contact">Contact me</a>
+          </div>
+          <p class="availability"><span class="led" aria-hidden="true"></span>Open to systems administrator and infrastructure roles in the UAE</p>
+        </div>
+
+        <figure class="topology">
+          <svg viewBox="0 0 440 440" role="img" aria-label="Network diagram: a central SonicWall firewall with five site-to-site VPN tunnels to branch sites, surrounded by a ring of forty dots, one for each remote-access VPN user.">
+            <circle class="ring" cx="220" cy="220" r="196"/>
+            <g class="remote">
+            <circle cx="235.4" cy="24.6" r="3.6"/>
+            <circle cx="265.8" cy="29.4" r="3.6"/>
+            <circle cx="295.0" cy="38.9" r="3.6"/>
+            <circle cx="322.4" cy="52.9" r="3.6"/>
+            <circle cx="347.3" cy="71.0" r="3.6"/>
+            <circle cx="369.0" cy="92.7" r="3.6"/>
+            <circle cx="387.1" cy="117.6" r="3.6"/>
+            <circle cx="401.1" cy="145.0" r="3.6"/>
+            <circle cx="410.6" cy="174.2" r="3.6"/>
+            <circle cx="415.4" cy="204.6" r="3.6"/>
+            <circle cx="415.4" cy="235.4" r="3.6"/>
+            <circle cx="410.6" cy="265.8" r="3.6"/>
+            <circle cx="401.1" cy="295.0" r="3.6"/>
+            <circle cx="387.1" cy="322.4" r="3.6"/>
+            <circle cx="369.0" cy="347.3" r="3.6"/>
+            <circle cx="347.3" cy="369.0" r="3.6"/>
+            <circle cx="322.4" cy="387.1" r="3.6"/>
+            <circle cx="295.0" cy="401.1" r="3.6"/>
+            <circle cx="265.8" cy="410.6" r="3.6"/>
+            <circle cx="235.4" cy="415.4" r="3.6"/>
+            <circle cx="204.6" cy="415.4" r="3.6"/>
+            <circle cx="174.2" cy="410.6" r="3.6"/>
+            <circle cx="145.0" cy="401.1" r="3.6"/>
+            <circle cx="117.6" cy="387.1" r="3.6"/>
+            <circle cx="92.7" cy="369.0" r="3.6"/>
+            <circle cx="71.0" cy="347.3" r="3.6"/>
+            <circle cx="52.9" cy="322.4" r="3.6"/>
+            <circle cx="38.9" cy="295.0" r="3.6"/>
+            <circle cx="29.4" cy="265.8" r="3.6"/>
+            <circle cx="24.6" cy="235.4" r="3.6"/>
+            <circle cx="24.6" cy="204.6" r="3.6"/>
+            <circle cx="29.4" cy="174.2" r="3.6"/>
+            <circle cx="38.9" cy="145.0" r="3.6"/>
+            <circle cx="52.9" cy="117.6" r="3.6"/>
+            <circle cx="71.0" cy="92.7" r="3.6"/>
+            <circle cx="92.7" cy="71.0" r="3.6"/>
+            <circle cx="117.6" cy="52.9" r="3.6"/>
+            <circle cx="145.0" cy="38.9" r="3.6"/>
+            <circle cx="174.2" cy="29.4" r="3.6"/>
+            <circle cx="204.6" cy="24.6" r="3.6"/>
+            </g>
+            <path class="tunnel-case" d="M220 220L220.0 98.0"/><path class="tunnel" pathLength="1" style="--i:0" d="M220 220L220.0 98.0"/>
+            <path class="tunnel-case" d="M220 220L336.0 182.3"/><path class="tunnel" pathLength="1" style="--i:1" d="M220 220L336.0 182.3"/>
+            <path class="tunnel-case" d="M220 220L291.7 318.7"/><path class="tunnel" pathLength="1" style="--i:2" d="M220 220L291.7 318.7"/>
+            <path class="tunnel-case" d="M220 220L148.3 318.7"/><path class="tunnel" pathLength="1" style="--i:3" d="M220 220L148.3 318.7"/>
+            <path class="tunnel-case" d="M220 220L104.0 182.3"/><path class="tunnel" pathLength="1" style="--i:4" d="M220 220L104.0 182.3"/>
+            <circle class="packet" cx="220" cy="220" r="4.5" style="--dx:0.0px;--dy:-122.0px;--i:0"/>
+            <circle class="packet" cx="220" cy="220" r="4.5" style="--dx:116.0px;--dy:-37.7px;--i:1"/>
+            <circle class="packet" cx="220" cy="220" r="4.5" style="--dx:71.7px;--dy:98.7px;--i:2"/>
+            <circle class="packet" cx="220" cy="220" r="4.5" style="--dx:-71.7px;--dy:98.7px;--i:3"/>
+            <circle class="packet" cx="220" cy="220" r="4.5" style="--dx:-116.0px;--dy:-37.7px;--i:4"/>
+            <g class="site" style="--i:0"><rect x="202.0" y="80.0" width="36" height="36" rx="6"/><path d="M212.0 94.0h16M212.0 102.0h16"/></g>
+            <g class="site" style="--i:1"><rect x="318.0" y="164.3" width="36" height="36" rx="6"/><path d="M328.0 178.3h16M328.0 186.3h16"/></g>
+            <g class="site" style="--i:2"><rect x="273.7" y="300.7" width="36" height="36" rx="6"/><path d="M283.7 314.7h16M283.7 322.7h16"/></g>
+            <g class="site" style="--i:3"><rect x="130.3" y="300.7" width="36" height="36" rx="6"/><path d="M140.3 314.7h16M140.3 322.7h16"/></g>
+            <g class="site" style="--i:4"><rect x="86.0" y="164.3" width="36" height="36" rx="6"/><path d="M96.0 178.3h16M96.0 186.3h16"/></g>
+            <g class="hub">
+              <rect x="182" y="182" width="76" height="76" rx="10"/>
+              <path d="M198 208h30M198 220h30M198 232h30"/>
+              <circle class="hub-led" cx="241" cy="208" r="3.5"/>
+              <rect class="hub-tag" x="235" y="227" width="12" height="9" rx="1.5"/>
+            </g>
+          </svg>
+          <ul class="legend">
+            <li><span class="key key-hub" aria-hidden="true"></span>SonicWall firewalls</li>
+            <li><span class="key key-tunnel" aria-hidden="true"></span>5 site-to-site tunnels</li>
+            <li><span class="key key-remote" aria-hidden="true"></span>40 remote VPN users</li>
+          </ul>
+          <figcaption>The network I run today at Lutfi Group of Companies.</figcaption>
+        </figure>
+      </section>
+
+      <dl class="figures" aria-label="Key figures from my current role">
+        <div><dt>6 Windows Servers</dt><dd>across 4 sites</dd></div>
+        <div><dt>100 users</dt><dd>supported day to day</dd></div>
+        <div><dt>100–120 tickets</dt><dd>resolved each month</dd></div>
+        <div><dt>120 CCTV cameras</dt><dd>across 15 sites</dd></div>
+        <div><dt>4–5 hours a week</dt><dd>saved through automation</dd></div>
+      </dl>
+    </div>
+
+    <section class="section" id="about">
+      <div class="wrap section-grid">
+        <div class="section-head">
+          <h2>Practical IT, from endpoint to infrastructure.</h2>
+          <p>From user issues and network links to servers, backups, and the scripts that keep them running.</p>
+        </div>
+        <div>
+          <div class="prose">
+            <p>I started in Dell field service, moved into enterprise IT support and VMware administration at Samsung R&amp;D Institute India, and since 2024 have been the System Administrator at Lutfi Group of Companies in Dubai, where I look after servers, Active Directory, firewalls and VPNs, backups, CCTV, and day-to-day support for around 100 users across multiple sites.</p>
+            <p>I value clear documentation, sensible security, tested backups, and automation that removes repetitive work. My goal is an IT environment that is easy to support, maintain, and recover.</p>
+          </div>
+          <ol class="approach" aria-label="How I approach an incident">
+            <li><strong>Solve the root cause.</strong><span>Troubleshooting</span></li>
+            <li><strong>Document the fix.</strong><span>Documentation</span></li>
+            <li><strong>Make the next incident easier.</strong><span>Continuous improvement</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="expertise">
+      <div class="wrap section-grid">
+        <div class="section-head">
+          <h2>The systems behind the business.</h2>
+          <p>The platforms and tools I work with day to day.</p>
+        </div>
+        <dl class="spec">
+          <div><dt>Systems administration</dt><dd>Windows Server 2016/2022, Linux, Active Directory, Group Policy, DNS, DHCP, Microsoft 365, patch management.</dd></div>
+          <div><dt>Networking and security</dt><dd>SonicWall firewall policies, NAT, port forwarding, site-to-site and remote-access VPN, LAN/WAN, TCP/IP troubleshooting.</dd></div>
+          <div><dt>Virtualization and servers</dt><dd>VMware ESXi, vSphere, vCenter, HPE ProLiant, Dell PowerEdge, iLO, iDRAC, RAID and storage troubleshooting.</dd></div>
+          <div><dt>Backup and recovery</dt><dd>Scripted backups, disaster recovery planning, regular restore testing, and infrastructure health monitoring.</dd></div>
+          <div><dt>Automation and containers</dt><dd>PowerShell, Python, AutoHotkey, scheduled tasks, and Docker-based self-hosted services for repeatable admin work.</dd></div>
+          <div><dt>Support and operations</dt><dd>Level 1–3 support, GLPI and Snipe-IT asset and help desk tools, BookStack documentation, CCTV/NVR systems.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="wrap section-grid">
+        <div class="section-head">
+          <h2>What I’ve built and run.</h2>
+          <p>Highlights from my current role and hands-on infrastructure work.</p>
+        </div>
+        <div>
+          <article class="work">
+            <div>
+              <h3>Multi-site firewall and VPN</h3>
+              <p>Configure and maintain SonicWall firewall policies, NAT, and port forwarding, and keep site-to-site tunnels and remote-access VPN running for staff working away from the office.</p>
+              <ul class="tags" aria-label="Technologies"><li>SonicWall</li><li>VPN</li><li>NAT</li></ul>
+            </div>
+            <div class="work-metric">5 site-to-site tunnels, 40 remote VPN users</div>
+          </article>
+          <article class="work">
+            <div>
+              <h3>Windows Server estate</h3>
+              <p>Administer production and backup Windows Servers across four sites, covering maintenance, security patching, performance, and HPE ProLiant hardware health through iLO.</p>
+              <ul class="tags" aria-label="Technologies"><li>Windows Server 2016/2022</li><li>HPE ProLiant</li><li>iLO</li></ul>
+            </div>
+            <div class="work-metric">6 servers, 4 sites, 100 users</div>
+          </article>
+          <article class="work">
+            <div>
+              <h3>Scripted backup and recovery</h3>
+              <p>Automated PowerShell backup jobs with regular restore tests, so recovery is proven rather than assumed. Paired with ongoing infrastructure health monitoring.</p>
+              <ul class="tags" aria-label="Technologies"><li>PowerShell</li><li>Disaster recovery</li><li>Monitoring</li></ul>
+            </div>
+            <div class="work-metric">Backups verified by regular restore tests</div>
+          </article>
+          <article class="work">
+            <div>
+              <h3>IT automation toolkit</h3>
+              <p>PowerShell, Python, and AutoHotkey scripts for server health checks, backups, and an internal IT utility tool that bundles common support tasks.</p>
+              <ul class="tags" aria-label="Technologies"><li>PowerShell</li><li>Python</li><li>AutoHotkey</li></ul>
+            </div>
+            <div class="work-metric">4–5 hours of manual work saved per week</div>
+          </article>
+          <article class="work">
+            <div>
+              <h3>Active Directory and service desk</h3>
+              <p>Manage Active Directory and Group Policy, including provisioning and access control, and provide Level 1–3 support across hardware, software, networking, and business systems.</p>
+              <ul class="tags" aria-label="Technologies"><li>Active Directory</li><li>Group Policy</li><li>Service desk</li></ul>
+            </div>
+            <div class="work-metric">100 users, 100–120 tickets per month</div>
+          </article>
+          <article class="work">
+            <div>
+              <h3>CCTV and NVR infrastructure</h3>
+              <p>Install, maintain, and troubleshoot CCTV and NVR systems, including network integration and storage management across company locations.</p>
+              <ul class="tags" aria-label="Technologies"><li>CCTV</li><li>NVR</li><li>Network integration</li></ul>
+            </div>
+            <div class="work-metric">120 cameras, 15 sites</div>
+          </article>
+          <article class="work">
+            <div>
+              <h3>IT documentation, asset, and help desk platforms</h3>
+              <p>Deploying and running self-hosted tools in Docker: BookStack as a central knowledge base for infrastructure notes, procedures, and troubleshooting fixes, and GLPI and Snipe-IT to track IT assets, support tickets, and operational tasks in one place.</p>
+              <ul class="tags" aria-label="Technologies"><li>Docker</li><li>BookStack</li><li>GLPI</li><li>Snipe-IT</li><li>Documentation</li></ul>
+            </div>
+            <div class="work-metric">Docs, assets, and tickets in one self-hosted stack</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="wrap section-grid">
+        <div class="section-head">
+          <h2>6+ years, from field service to infrastructure.</h2>
+          <p>End-to-end IT operations: user issues, network connectivity, servers, backups, and automation.</p>
+          <a class="btn" href="Mohammed_Irshad_CV.pdf" download>Download full CV</a>
+        </div>
+        <div>
+          <ol>
+            <li class="role">
+              <div class="role-date">Jul 2024 – Present<br><span class="now"><span class="led" aria-hidden="true"></span>Current role</span></div>
+              <div>
+                <h3>System Administrator</h3>
+                <p class="role-company">Lutfi Group of Companies, Dubai, UAE</p>
+                <ul class="role-points">
+                  <li>Administer 6 Windows Servers across 4 sites for 100 users, including patching, security, and performance.</li>
+                  <li>Manage Active Directory and Group Policy, provisioning, and access control.</li>
+                  <li>Run SonicWall firewalls, 5 site-to-site VPN tunnels, and remote-access VPN for 40 users.</li>
+                  <li>Automate backups and admin tasks with PowerShell, Python, and AutoHotkey, saving 4–5 hours a week.</li>
+                  <li>Provide Level 1–3 support, resolving 100–120 tickets a month; maintain 120 CCTV cameras across 15 sites.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="role">
+              <div class="role-date">Nov 2022 – May 2024</div>
+              <div>
+                <h3>IT Service Engineer</h3>
+                <p class="role-company">Samsung R&amp;D Institute India, Bangalore</p>
+                <ul class="role-points">
+                  <li>Managed and optimized VMware ESXi/vSphere environments through vCenter.</li>
+                  <li>Configured Dell and HP servers and workstations, including rack installation, OS deployment, and RAID.</li>
+                  <li>Provided enterprise support across Windows and Linux, and automated recurring admin tasks.</li>
+                </ul>
+              </div>
+            </li>
+            <li class="role">
+              <div class="role-date">Aug 2020 – Nov 2022</div>
+              <div>
+                <h3>Field Service Engineer</h3>
+                <p class="role-company">TVS Electronics (Dell Field Services), Bangalore</p>
+                <ul class="role-points">
+                  <li>Diagnosed and serviced Dell laptops, desktops, and peripherals for enterprise clients.</li>
+                  <li>Performed Windows/Linux setup and maintenance, and supported SLA compliance.</li>
+                </ul>
+              </div>
+            </li>
+          </ol>
+          <dl class="extras">
+            <div><dt>Education</dt><dd><strong>B.E. Computer Science</strong>Anna University, Chennai, 2015 – 2019</dd></div>
+            <div><dt>Languages</dt><dd><strong>English and Hindi (proficient)</strong>Arabic (beginner)</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-grid">
+        <div>
+          <h2>Hiring for IT infrastructure or systems administration?</h2>
+          <p>I’m open to systems administrator and infrastructure roles in the UAE. Based in Dubai with a UAE driving licence.</p>
+          <a class="contact-email" href="mailto:m.irshad.career@gmail.com">m.irshad.career@gmail.com</a>
+        </div>
+        <div class="contact-actions">
+          <a class="btn btn-primary" href="mailto:m.irshad.career@gmail.com">Email me</a>
+          <button class="btn" id="copyEmail" type="button" data-email="m.irshad.career@gmail.com">Copy email address</button>
+          <a class="btn" href="https://linkedin.com/in/irshad21" target="_blank" rel="noopener noreferrer">LinkedIn profile</a>
+          <a class="btn" href="Mohammed_Irshad_CV.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <span>© <span id="year">2026</span> Mohammed Irshad, Dubai, UAE</span>
+      <span>IT infrastructure, systems administration, automation</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      // Mobile menu
+      var menuToggle = document.getElementById('menuToggle');
+      var navLinks = document.getElementById('navLinks');
+      function setMenu(open) {
+        navLinks.classList.toggle('open', open);
+        menuToggle.setAttribute('aria-expanded', String(open));
+        menuToggle.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
+      }
+      menuToggle.addEventListener('click', function () { setMenu(!navLinks.classList.contains('open')); });
+      navLinks.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', function () { setMenu(false); }); });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && navLinks.classList.contains('open')) { setMenu(false); menuToggle.focus(); }
+      });
+
+      // Theme toggle: follows the system until the visitor chooses
+      var themeToggle = document.getElementById('themeToggle');
+      var systemDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+      function currentTheme() {
+        return root.getAttribute('data-theme') || (systemDark && systemDark.matches ? 'dark' : 'light');
+      }
+      function labelTheme() {
+        themeToggle.setAttribute('aria-label', currentTheme() === 'dark' ? 'Switch to light theme' : 'Switch to dark theme');
+      }
+      themeToggle.addEventListener('click', function () {
+        var next = currentTheme() === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem('theme', next); } catch (e) {}
+        labelTheme();
+      });
+      if (systemDark && systemDark.addEventListener) systemDark.addEventListener('change', labelTheme);
+      labelTheme();
+
+      // Highlight the section being read in the nav
+      var links = {};
+      navLinks.querySelectorAll('a').forEach(function (a) { links[a.getAttribute('href').slice(1)] = a; });
+      if ('IntersectionObserver' in window) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            Object.keys(links).forEach(function (id) { links[id].removeAttribute('aria-current'); });
+            if (links[entry.target.id]) links[entry.target.id].setAttribute('aria-current', 'true');
+          });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        ['home', 'about', 'expertise', 'projects', 'experience', 'contact'].forEach(function (id) {
+          var el = document.getElementById(id);
+          if (el) spy.observe(el);
+        });
+      }
+
+      // Copy email address
+      var copyBtn = document.getElementById('copyEmail');
+      var copyLabel = copyBtn.textContent;
+      var copyTimer;
+      copyBtn.addEventListener('click', function () {
+        var email = copyBtn.getAttribute('data-email');
+        function done(ok) {
+          copyBtn.textContent = ok ? 'Email address copied' : email;
+          clearTimeout(copyTimer);
+          copyTimer = setTimeout(function () { copyBtn.textContent = copyLabel; }, 2200);
+        }
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(email).then(function () { done(true); }, function () { done(false); });
+        } else { done(false); }
+      });
+      copyBtn.setAttribute('aria-live', 'polite');
+
+      document.getElementById('year').textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
